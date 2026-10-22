@@ -1,8 +1,13 @@
 /// Service Worker for GCP — offline-first caching
-const CACHE_NAME = 'gcp-v1';
+const CACHE_NAME = 'gcp-v2';
 const PRECACHE = [
   '/Conspiracy-Projects/',
   '/Conspiracy-Projects/index.html',
+  '/Conspiracy-Projects/favicon.svg',
+  '/Conspiracy-Projects/favicon-32x32.png',
+  '/Conspiracy-Projects/apple-touch-icon.png',
+  '/Conspiracy-Projects/icon-192.png',
+  '/Conspiracy-Projects/icon-512.png',
 ];
 
 self.addEventListener('install', (e) => {

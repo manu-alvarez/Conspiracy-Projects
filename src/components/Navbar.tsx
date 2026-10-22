@@ -18,13 +18,20 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 backdrop-blur-xl bg-bg/80 border-b border-white/[0.04]">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 h-14">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)}>
-          <span className="text-base font-black text-amber-400 group-hover:text-amber-300 transition-colors tracking-tight">
-            GCP
-          </span>
-          <span className="hidden sm:inline text-[9px] font-mono text-zinc-600 tracking-[0.15em] uppercase">
-            Global Conspiracy Projects
-          </span>
+        <Link to="/" className="flex items-center gap-2.5 group" onClick={() => setOpen(false)}>
+          <img
+            src="/Conspiracy-Projects/favicon-32x32.png"
+            alt="GCP Logo"
+            className="w-6 h-6 rounded-md shadow-[0_0_10px_rgba(245,158,11,0.3)] group-hover:scale-105 transition-transform"
+          />
+          <div className="flex flex-col">
+            <span className="text-sm font-black text-amber-400 group-hover:text-amber-300 transition-colors tracking-tight leading-none">
+              GCP
+            </span>
+            <span className="hidden sm:inline text-[8px] font-mono text-zinc-500 tracking-[0.15em] uppercase leading-none mt-0.5">
+              Global Conspiracy Projects
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}

@@ -16,14 +16,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-amber-300 flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.25)]">
-                <svg className="w-4 h-4 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
-                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                  <polyline points="2 17 12 22 22 17" />
-                  <polyline points="2 12 12 17 22 12" />
-                </svg>
-              </div>
+            <div className="flex items-center gap-2.5 mb-4">
+              <img
+                src="/Conspiracy-Projects/favicon-32x32.png"
+                alt="GCP Logo"
+                className="w-7 h-7 rounded-md shadow-[0_0_12px_rgba(245,158,11,0.25)]"
+              />
               <span className="text-xs font-black tracking-[0.1em] text-zinc-200 uppercase">GCP</span>
             </div>
             <p className="text-[11px] text-zinc-500 leading-relaxed max-w-xs">

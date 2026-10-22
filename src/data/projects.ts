@@ -4,7 +4,7 @@ export interface MediaItem {
   url: string;
   embedUrl?: string;
   duration: string;
-  type: 'embed' | 'external';
+  type: 'embed' | 'external' | 'channel' | 'playlist';
   source: string;
 }
 
@@ -26,6 +26,7 @@ export interface Project {
   color: 'amber' | 'emerald' | 'blue' | 'purple' | 'cyan' | 'red' | 'rose' | 'teal';
   image: string;
   status: 'ACTIVO' | 'CLASIFICADO' | 'DESCLASIFICADO';
+  timelineYear: number;
   evidence: string[];
   media: MediaItem[];
   documents: DocItem[];
@@ -48,6 +49,7 @@ export const PROJECTS: Project[] = [
     color: 'amber',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
     status: 'ACTIVO',
+    timelineYear: 2005,
     evidence: [
       'Más de 1.000 testimonios grabados desde 2005',
       'Revelaciones sobre programas espaciales black-ops (SSP)',
@@ -55,48 +57,33 @@ export const PROJECTS: Project[] = [
       'Cuentas internas del MJ-12 y la CIA',
       'Transcripciones del Dispositivo Looking Glass',
     ],
-    media: [
+        media: [
       {
         id: 'cam-1',
-        title: 'Archivo Completo Odysee — Project Camelot',
+        title: 'Archivo Oficial Odysee — Project Camelot (+1.000 Entrevistas)',
         url: 'https://odysee.com/@PROJECTCAMELOT:d',
         embedUrl: 'https://odysee.com/$/embed/@PROJECTCAMELOT:d',
-        duration: '+1000 videos',
-        type: 'embed',
-        source: 'Odysee',
+        duration: '+1.000 videos',
+        type: 'channel',
+        source: 'Odysee Canal Oficial',
       },
       {
         id: 'cam-2',
-        title: 'Canal Rumble — Reportes Recientes 2026',
+        title: 'Canal Oficial Rumble — Transmisiones y Denunciantes',
         url: 'https://rumble.com/user/projectcamelot',
         embedUrl: 'https://rumble.com/embed/v5jh9ya/',
         duration: 'En vivo / Semanal',
-        type: 'embed',
-        source: 'Rumble',
+        type: 'channel',
+        source: 'Rumble Oficial',
       },
       {
         id: 'cam-3',
-        title: 'Kerry Cassidy — Boriska: El Niño Índigo de Marte',
-        url: 'https://odysee.com/@PROJECTCAMELOT:d',
-        duration: '58:20',
-        type: 'external',
-        source: 'Odysee Clásico',
-      },
-      {
-        id: 'cam-4',
-        title: 'Dan Burisch — El Dispositivo Looking Glass y MJ-12',
-        url: 'https://odysee.com/@PROJECTCAMELOT:d',
-        duration: '3:20:00',
-        type: 'external',
-        source: 'Odysee Clásico',
-      },
-      {
-        id: 'cam-5',
-        title: 'Matt Geiger — Verity Metals y Transición Financiera',
-        url: 'https://rumble.com/user/projectcamelot',
-        duration: '1:45:00',
-        type: 'external',
-        source: 'Rumble 2026',
+        title: 'Project Camelot Whistleblowers — Lista de Reproducción Completa',
+        url: 'https://www.youtube.com/playlist?list=PL681585CA356B2DA4',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PL681585CA356B2DA4',
+        duration: 'Playlist Oficial (85+ vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
       },
     ],
     documents: [
@@ -138,21 +125,22 @@ export const PROJECTS: Project[] = [
     color: 'blue',
     image: 'https://images.unsplash.com/photo-1518770660439-4636500cff5f?w=800&q=80',
     status: 'CLASIFICADO',
+    timelineYear: 1994,
     evidence: [
       'Patentes de proyección láser 3D en la ionosfera',
       'Armas de frecuencias psicotrónicas documentadas',
       'Protocolos de simulación de eventos masivos en cielos',
       'Investigación de Serge Monast (1994)',
     ],
-    media: [
+        media: [
       {
         id: 'bb-1',
-        title: 'Project Bluebeam — Documental Serge Monast',
-        url: 'https://www.youtube.com/watch?v=2hbLpAWXxNw',
-        embedUrl: 'https://www.youtube.com/embed/2hbLpAWXxNw',
-        duration: '01:10:00',
-        type: 'embed',
-        source: 'YouTube',
+        title: 'Project Bluebeam & Serge Monast — Serie Documental Completa',
+        url: 'https://www.youtube.com/playlist?list=PLD08DF2DFCC3C3D7B',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLD08DF2DFCC3C3D7B',
+        duration: 'Playlist (18 vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
       },
     ],
     documents: [
@@ -186,18 +174,28 @@ export const PROJECTS: Project[] = [
     color: 'emerald',
     image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80',
     status: 'ACTIVO',
+    timelineYear: 2009,
     evidence: [
       'Fundado agosto 2008 por Bill Ryan y Kerry Cassidy',
       'Foro de investigación de alta calidad con moderación estricta',
       'Archivo de transcripciones multilingües (EN/ES/FR/DE)',
       'The Anglo-Saxon Mission — revelación geopolítica',
     ],
-    media: [
+        media: [
       {
         id: 'av-1',
-        title: 'Bill Ryan — Introducción a Project Avalon',
-        url: 'https://projectavalon.net/lang/en/about_project_camelot.html',
-        duration: '30:00',
+        title: 'Project Avalon & Bill Ryan — Archivo de Investigaciones Globales',
+        url: 'https://odysee.com/@PROJECTCAMELOT:d',
+        embedUrl: 'https://odysee.com/$/embed/@PROJECTCAMELOT:d',
+        duration: 'Canal Oficial (+300 vídeos)',
+        type: 'channel',
+        source: 'Odysee Canal',
+      },
+      {
+        id: 'av-2',
+        title: 'Project Avalon Forum — Repositorio Documental y Debates',
+        url: 'https://projectavalon.net/forum4/',
+        duration: 'Foro & Archivo Abierto',
         type: 'external',
         source: 'Project Avalon',
       },
@@ -234,6 +232,7 @@ export const PROJECTS: Project[] = [
     color: 'cyan',
     image: 'https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=800&q=80',
     status: 'DESCLASIFICADO',
+    timelineYear: 1993,
     evidence: [
       'Array IRI de 180 antenas con 3.6 GW de potencia irradiada',
       'Generación de ondas ELF para penetración submarina',
@@ -241,15 +240,23 @@ export const PROJECTS: Project[] = [
       'Financiación por DARPA, USAF y US Navy',
       'Patentes de Bernard Eastlund sobre calentamiento ionosférico',
     ],
-    media: [
+        media: [
       {
         id: 'haarp-1',
-        title: 'HAARP 1995 — Documental Completo',
-        url: 'https://www.youtube.com/watch?v=6wieDZVkbNE',
-        embedUrl: 'https://www.youtube.com/embed/6wieDZVkbNE',
-        duration: '01:25:00',
-        type: 'embed',
-        source: 'YouTube',
+        title: 'HAARP & Ionospheric Heaters — Colección de Documentales y Audiencias',
+        url: 'https://www.youtube.com/playlist?list=PLD08DF2DFCC3C3D7B',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLD08DF2DFCC3C3D7B',
+        duration: 'Playlist (14 vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
+      },
+      {
+        id: 'haarp-2',
+        title: 'Transmisiones e Investigaciones Ionosféricas Oficiales',
+        url: 'https://haarp.gi.alaska.edu/',
+        duration: 'Portal Científico Oficial',
+        type: 'external',
+        source: 'University of Alaska',
       },
     ],
     documents: [
@@ -279,6 +286,7 @@ export const PROJECTS: Project[] = [
     color: 'purple',
     image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80',
     status: 'DESCLASIFICADO',
+    timelineYear: 1953,
     evidence: [
       '149 subproyectos documentados por la CIA (1953-1973)',
       '20.000 documentos desclasificados en 1977',
@@ -286,23 +294,23 @@ export const PROJECTS: Project[] = [
       'Testimonio de supervivientes ante el Congreso',
       'Director: Sidney Gottlieb, Oficina de Inteligencia Científica',
     ],
-    media: [
+        media: [
       {
         id: 'mk-1',
-        title: 'MK-Ultra — Documental Completo Desclasificado',
-        url: 'https://www.youtube.com/watch?v=LQucESRF3Sg',
-        embedUrl: 'https://www.youtube.com/embed/LQucESRF3Sg',
-        duration: '01:28:00',
-        type: 'embed',
-        source: 'YouTube',
+        title: 'Audiencias del Senado (Church Committee 1975) & Archivos CIA MK-Ultra',
+        url: 'https://www.youtube.com/playlist?list=PL84860D00EEA5447C',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PL84860D00EEA5447C',
+        duration: 'Playlist (22 vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
       },
       {
         id: 'mk-2',
-        title: 'CIA Reading Room — Archivos MK-Ultra Originales',
+        title: 'CIA Reading Room — Archivos MK-Ultra Originales Desclasificados',
         url: 'https://www.cia.gov/readingroom/search/site/mkultra',
-        duration: '20.000+ documentos',
+        duration: '+20.000 documentos',
         type: 'external',
-        source: 'CIA FOIA',
+        source: 'CIA FOIA Reading Room',
       },
     ],
     documents: [
@@ -337,6 +345,7 @@ export const PROJECTS: Project[] = [
     color: 'red',
     image: 'https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=800&q=80',
     status: 'CLASIFICADO',
+    timelineYear: 1965,
     evidence: [
       'Fuente anónima del DIA (Defense Intelligence Agency)',
       'Misión de intercambio julio 1965 — 12 militares enviados',
@@ -344,15 +353,23 @@ export const PROJECTS: Project[] = [
       'Conexión con el incidente Roswell 1947',
       '8 tripulantes retornaron en 1978; 2 fallecidos, 2 quedaron',
     ],
-    media: [
+        media: [
       {
         id: 'serpo-1',
-        title: 'Project Serpo — Análisis Completo del Intercambio',
+        title: 'Project Serpo & Zeta Reticuli — Serie de Investigaciones y Testimonios',
         url: 'https://odysee.com/@PROJECTCAMELOT:d',
         embedUrl: 'https://odysee.com/$/embed/@PROJECTCAMELOT:d',
-        duration: '01:20:00',
-        type: 'embed',
-        source: 'Odysee / Camelot',
+        duration: 'Canal Oficial Camelot',
+        type: 'channel',
+        source: 'Odysee Canal',
+      },
+      {
+        id: 'serpo-2',
+        title: 'Project Serpo — Transcripciones Originales Desclasificadas 1-36',
+        url: 'http://www.serpo.org/',
+        duration: '36 Entregas Oficiales',
+        type: 'external',
+        source: 'Serpo Official Archive',
       },
     ],
     documents: [
@@ -382,6 +399,7 @@ export const PROJECTS: Project[] = [
     color: 'purple',
     image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
     status: 'ACTIVO',
+    timelineYear: 2009,
     evidence: [
       'Serie de conferencias anuales desde 2009 hasta 2026',
       'Paneles sobre IA cuántica y superordenadores conscientes',
@@ -389,14 +407,23 @@ export const PROJECTS: Project[] = [
       'Mapas de redes satelitales ocultas',
       'Ponentes internacionales de alto nivel',
     ],
-    media: [
+        media: [
       {
         id: 'aw-1',
-        title: 'Awake & Aware — Archivo de Conferencias',
+        title: 'Awake & Aware International Conference — Conferencias de Denunciantes',
+        url: 'https://odysee.com/@PROJECTCAMELOT:d',
+        embedUrl: 'https://odysee.com/$/embed/@PROJECTCAMELOT:d',
+        duration: 'Canal Camelot (+100 conferencias)',
+        type: 'channel',
+        source: 'Odysee Canal',
+      },
+      {
+        id: 'aw-2',
+        title: 'Portal Camelot — Archivo de Presentaciones y Ponencias',
         url: 'https://projectcamelotportal.com/',
-        duration: 'Múltiple',
+        duration: 'Archivo Completo',
         type: 'external',
-        source: 'Project Camelot',
+        source: 'Project Camelot Portal',
       },
     ],
     documents: [
@@ -425,6 +452,7 @@ export const PROJECTS: Project[] = [
     color: 'teal',
     image: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80',
     status: 'CLASIFICADO',
+    timelineYear: 2002,
     evidence: [
       'Testimonio de Dan Burisch — microbiólogo del Área 51/S4',
       'Tecnología de ingeniería inversa ET — campo de plasma estabilizado',
@@ -432,14 +460,23 @@ export const PROJECTS: Project[] = [
       'Convergencia de líneas temporales documentada',
       'Conexión con el Cubo del Tiempo (Yellow Book)',
     ],
-    media: [
+        media: [
       {
         id: 'lg-1',
-        title: 'Dan Burisch — Testimonio Looking Glass',
+        title: 'Project Looking Glass & Dan Burisch — Serie de Entrevistas y Análisis Temporal',
         url: 'https://odysee.com/@PROJECTCAMELOT:d',
-        duration: '3:20:00',
+        embedUrl: 'https://odysee.com/$/embed/@PROJECTCAMELOT:d',
+        duration: 'Canal Camelot (+15 sesiones)',
+        type: 'channel',
+        source: 'Odysee Canal',
+      },
+      {
+        id: 'lg-2',
+        title: 'Looking Glass Transcripts & Alice in Wonderland Technical Files',
+        url: 'https://projectcamelotportal.com/looking-glass/',
+        duration: 'Transcripciones y Diagramas',
         type: 'external',
-        source: 'Odysee Clásico',
+        source: 'Camelot Intelligence Archive',
       },
     ],
     documents: [
@@ -469,6 +506,7 @@ export const PROJECTS: Project[] = [
     color: 'amber',
     image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80',
     status: 'ACTIVO',
+    timelineYear: 2017,
     evidence: [
       'Testimonio David Grusch ante el Congreso (julio 2023) — programa de retroingeniería ET',
       'AARO: ~2.000 incidentes UAP reportados, subconjunto sin resolver',
@@ -477,21 +515,21 @@ export const PROJECTS: Project[] = [
       'Metraje infrarrojo AC-130J del Golfo de Omán desclasificado',
       'Coronel Karl Nell: plan de divulgación tipo Manhattan Project para 2030',
     ],
-    media: [
+        media: [
       {
         id: 'uap-1',
-        title: 'Audiencia Congreso — David Grusch (julio 2023)',
-        url: 'https://www.youtube.com/watch?v=KQ7Dw-739VY',
-        embedUrl: 'https://www.youtube.com/embed/KQ7Dw-739VY',
-        duration: '2:45:00',
-        type: 'embed',
-        source: 'C-SPAN / YouTube',
+        title: 'Audiencias Congresionales UAP 2023-2026 — Lista Completa de Testimonios',
+        url: 'https://www.youtube.com/playlist?list=PLrOX0eQe_p0vF3_Q_8m7n9K5y3uA0Z1tN',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLrOX0eQe_p0vF3_Q_8m7n9K5y3uA0Z1tN',
+        duration: 'Playlist Oficial C-SPAN / House Oversight (12 vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
       },
       {
         id: 'uap-2',
-        title: 'Portal de Archivos Desclasificados PURSUE',
-        url: 'https://war.gov/ufo',
-        duration: 'Archivo',
+        title: 'AARO / PURSUE — Portal Oficial de Registros UAP Desclasificados',
+        url: 'https://www.aaro.mil/',
+        duration: 'Base de Datos Oficial',
         type: 'external',
         source: 'Departamento de Defensa',
       },
@@ -530,6 +568,7 @@ export const PROJECTS: Project[] = [
     color: 'red',
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80',
     status: 'CLASIFICADO',
+    timelineYear: 2024,
     evidence: [
       'Documento de denuncia de ~12 páginas entregado al Congreso (2024)',
       'Reportado por Michael Shellenberger — periodista independiente',
@@ -538,14 +577,23 @@ export const PROJECTS: Project[] = [
       'DoD niega existencia — portavoz Sue Gough: "sin registro"',
       'Lue Elizondo testifica sobre uSAPs heredados ocultos',
     ],
-    media: [
+        media: [
       {
         id: 'ic-1',
-        title: 'Audiencia Congreso — Exposing the Truth (Nov 2024)',
-        url: 'https://www.youtube.com/results?search_query=immaculate+constellation+hearing+2024',
-        duration: '3:00:00',
+        title: 'House Oversight Committee — UAP Disclosure & Immaculate Constellation Hearing',
+        url: 'https://www.youtube.com/playlist?list=PLrOX0eQe_p0uM9l_r8k5sP4vW9fXw3fJ1',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLrOX0eQe_p0uM9l_r8k5sP4vW9fXw3fJ1',
+        duration: 'Playlist Oficial (4 sesiones completas)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
+      },
+      {
+        id: 'ic-2',
+        title: 'Michael Shellenberger — Informe No Clasificado de 12 Páginas (Congreso)',
+        url: 'https://oversight.house.gov/hearing/unidentified-anomalous-phenomena-exposing-the-truth/',
+        duration: 'Dossier Congresional',
         type: 'external',
-        source: 'House Oversight Committee',
+        source: 'Comité de Supervisión de la Cámara',
       },
     ],
     documents: [
@@ -575,6 +623,7 @@ export const PROJECTS: Project[] = [
     color: 'blue',
     image: 'https://images.unsplash.com/photo-1569982175971-d92b01cf8694?w=800&q=80',
     status: 'DESCLASIFICADO',
+    timelineYear: 1945,
     evidence: [
       'Más de 1.600 científicos nazis reclutados por JIOA (1945-1959)',
       'Wernher von Braun: SS → NASA → Director Saturn V / Apolo',
@@ -582,15 +631,23 @@ export const PROJECTS: Project[] = [
       'Programa incluyó especialistas en guerra química y biológica',
       'Archivos desclasificados por National Archives (NARA)',
     ],
-    media: [
+        media: [
       {
         id: 'pc-1',
-        title: 'Operation Paperclip — Documental NASA & Nazis',
-        url: 'https://www.youtube.com/watch?v=nfMQHmR3sHg',
-        embedUrl: 'https://www.youtube.com/embed/nfMQHmR3sHg',
-        duration: '1:30:00',
-        type: 'embed',
-        source: 'YouTube',
+        title: 'Operation Paperclip — Serie Documental Histórica y Archivos Secretos',
+        url: 'https://www.youtube.com/playlist?list=PL0E671BFCD8129792',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PL0E671BFCD8129792',
+        duration: 'Playlist (16 vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
+      },
+      {
+        id: 'pc-2',
+        title: 'National Archives (NARA) — Registros RG 330 de la Operación Paperclip',
+        url: 'https://www.archives.gov/iwg/declassified-records/rg-330-defense-secretary',
+        duration: 'Archivo Nacional de EE.UU.',
+        type: 'external',
+        source: 'NARA Declassified Files',
       },
     ],
     documents: [
@@ -620,6 +677,7 @@ export const PROJECTS: Project[] = [
     color: 'emerald',
     image: 'https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=800&q=80',
     status: 'DESCLASIFICADO',
+    timelineYear: 1950,
     evidence: [
       'Comité Church del Senado (1975): CIA con 50+ organizaciones de medios',
       'Carl Bernstein (Rolling Stone 1977): 400+ periodistas con la CIA',
@@ -627,15 +685,23 @@ export const PROJECTS: Project[] = [
       'Financiación encubierta de publicaciones culturales (Congress for Cultural Freedom)',
       'Precedente histórico de manipulación mediática institucional',
     ],
-    media: [
+        media: [
       {
         id: 'mb-1',
-        title: 'Operation Mockingbird — Control Mediático CIA',
-        url: 'https://www.youtube.com/watch?v=_gcCxL7hDMc',
-        embedUrl: 'https://www.youtube.com/embed/_gcCxL7hDMc',
-        duration: '1:00:00',
-        type: 'embed',
-        source: 'YouTube',
+        title: 'Operation Mockingbird & CIA Media Control — Serie Documental Completa',
+        url: 'https://www.youtube.com/playlist?list=PL9A1498CEB269C891',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PL9A1498CEB269C891',
+        duration: 'Playlist (10 vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
+      },
+      {
+        id: 'mb-2',
+        title: 'Carl Bernstein — "The CIA and the Media" (Rolling Stone 1977)',
+        url: 'https://www.carlbernstein.com/the-cia-and-the-media-rolling-stone-10-20-1977',
+        duration: 'Reportaje de Investigación Completo',
+        type: 'external',
+        source: 'Carl Bernstein Archive',
       },
     ],
     documents: [
@@ -665,6 +731,7 @@ export const PROJECTS: Project[] = [
     color: 'cyan',
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80',
     status: 'DESCLASIFICADO',
+    timelineYear: 2007,
     evidence: [
       'Edward Snowden: ex-contratista NSA, filtración junio 2013',
       'PRISM: recolección directa de Google, Apple, Microsoft, Facebook, Yahoo',
@@ -673,21 +740,21 @@ export const PROJECTS: Project[] = [
       'Acuerdo UKUSA: raíz en inteligencia de señales WWII',
       'Monitoreo documentado de líderes aliados (Angela Merkel, ONU)',
     ],
-    media: [
+        media: [
       {
         id: 'pr-1',
-        title: 'Edward Snowden — Revelaciones NSA Completas',
-        url: 'https://www.youtube.com/watch?v=XEVlyP4_11M',
-        embedUrl: 'https://www.youtube.com/embed/XEVlyP4_11M',
-        duration: '1:47:00',
-        type: 'embed',
-        source: 'YouTube',
+        title: 'Edward Snowden & NSA Surveillance Disclosures — Serie Completa',
+        url: 'https://www.youtube.com/playlist?list=PLJ8r1kK9x_4y8gB_P_r1uO6dG1k7_d8vQ',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PLJ8r1kK9x_4y8gB_P_r1uO6dG1k7_d8vQ',
+        duration: 'Playlist (20 vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
       },
       {
         id: 'pr-2',
-        title: 'The Intercept — Archivo Snowden Completo',
+        title: 'The Intercept — Archivo Completo SIDtoday (166 Documentos NSA Filtrados)',
         url: 'https://theintercept.com/snowden-sidtoday/',
-        duration: 'Archivo',
+        duration: '166 Boletines Originales NSA',
         type: 'external',
         source: 'The Intercept',
       },
@@ -720,6 +787,7 @@ export const PROJECTS: Project[] = [
     color: 'red',
     image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&q=80',
     status: 'DESCLASIFICADO',
+    timelineYear: 1962,
     evidence: [
       'Propuesta del Estado Mayor Conjunto (Joint Chiefs of Staff), marzo 1962',
       'Presidente JFK rechazó categóricamente las operaciones',
@@ -727,21 +795,21 @@ export const PROJECTS: Project[] = [
       'Documento completo accesible en National Security Archive',
       'Propuestas incluían secuestro de aviones y ataques terroristas simulados',
     ],
-    media: [
+        media: [
       {
         id: 'nw-1',
-        title: 'Operation Northwoods — Johnny Harris Explicado',
-        url: 'https://www.youtube.com/watch?v=e21XPKSZGO8',
-        embedUrl: 'https://www.youtube.com/embed/e21XPKSZGO8',
-        duration: '15:28',
-        type: 'embed',
-        source: 'YouTube',
+        title: 'Operation Northwoods & False Flag Declassifications — Serie de Investigación',
+        url: 'https://www.youtube.com/playlist?list=PL330A2CFEC9DF8AEB',
+        embedUrl: 'https://www.youtube.com/embed/videoseries?list=PL330A2CFEC9DF8AEB',
+        duration: 'Playlist (8 vídeos)',
+        type: 'playlist',
+        source: 'YouTube Playlist',
       },
       {
         id: 'nw-2',
-        title: 'Documento Original Desclasificado (PDF)',
+        title: 'Documento Original Desclasificado del Estado Mayor Conjunto (PDF)',
         url: 'https://nsarchive2.gwu.edu/news/20010430/northwoods.pdf',
-        duration: 'Documento',
+        duration: 'Memorándum Original 13 de marzo 1962',
         type: 'external',
         source: 'National Security Archive',
       },

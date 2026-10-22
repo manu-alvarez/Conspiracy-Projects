@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { PROJECTS } from '../data/projects';
+import { useLang } from '../contexts/LangContext';
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const { t } = useLang();
 
   return (
     <footer className="relative mt-24 border-t border-white/[0.04]">
@@ -24,14 +27,14 @@ export default function Footer() {
               <span className="text-xs font-black tracking-[0.1em] text-zinc-200 uppercase">GCP</span>
             </div>
             <p className="text-[11px] text-zinc-500 leading-relaxed max-w-xs">
-              Hub de investigación multimedia. Documentación, análisis y archivo de programas clasificados y testimonios de denunciantes globales.
+              {t('footer.brand_desc')}
             </p>
           </div>
 
           {/* Projects */}
           <div>
             <h4 className="text-[10px] font-mono font-bold tracking-[0.2em] text-zinc-400 uppercase mb-4">
-              Proyectos
+              {t('nav.projects')}
             </h4>
             <ul className="space-y-2">
               {PROJECTS.slice(0, 6).map((p) => (
@@ -50,7 +53,7 @@ export default function Footer() {
           {/* Resources */}
           <div>
             <h4 className="text-[10px] font-mono font-bold tracking-[0.2em] text-zinc-400 uppercase mb-4">
-              Fuentes Externas
+              {t('footer.external_sources')}
             </h4>
             <ul className="space-y-2">
               <li><a href="https://projectcamelotportal.com/" target="_blank" rel="noopener" className="text-xs text-zinc-500 hover:text-amber-400 transition-colors">Portal Camelot</a></li>
@@ -63,13 +66,13 @@ export default function Footer() {
           {/* Info */}
           <div>
             <h4 className="text-[10px] font-mono font-bold tracking-[0.2em] text-zinc-400 uppercase mb-4">
-              Información
+              {t('footer.info')}
             </h4>
             <ul className="space-y-2">
-              <li className="text-xs text-zinc-500">Idioma: Español</li>
-              <li className="text-xs text-zinc-500">Traducción Neural (NMT)</li>
-              <li className="text-xs text-zinc-500">Archivo Multimedia</li>
-              <li className="text-xs text-zinc-500">Open Source</li>
+              <li className="text-xs text-zinc-500">{t('footer.lang_val')}</li>
+              <li className="text-xs text-zinc-500">PWA Offline & Service Worker</li>
+              <li className="text-xs text-zinc-500">{t('detail.multimedia')} & Playlists</li>
+              <li className="text-xs text-zinc-500">Open Source (GitHub Pages)</li>
             </ul>
           </div>
         </div>
@@ -77,10 +80,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/[0.04] pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-[10px] text-zinc-600 font-mono tracking-wider">
-            © {year} GLOBAL CONSPIRACY PROJECTS — HUB DE INVESTIGACIÓN
+            © {CURRENT_YEAR} GLOBAL CONSPIRACY PROJECTS — RESEARCH HUB
           </p>
-          <p className="text-[9px] text-zinc-700 font-mono">
-            Compilación con fines de investigación y archivo. Contenido de terceros sujeto a sus respectivas licencias.
+          <p className="text-[9px] text-zinc-700 font-mono text-center sm:text-right">
+            {t('footer.rights')}
           </p>
         </div>
       </div>

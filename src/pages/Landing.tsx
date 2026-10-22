@@ -1,10 +1,12 @@
 import { useState, useMemo } from 'react';
 import { FEATURED_PROJECTS, PROJECTS } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
+import { useLang } from '../contexts/LangContext';
 
 const ALL_CATEGORIES = Array.from(new Set(PROJECTS.map((p) => p.category)));
 
 export default function Landing() {
+  const { t } = useLang();
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -48,7 +50,7 @@ export default function Landing() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/20 bg-amber-500/5 backdrop-blur-md mb-8 animate-fade-in">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
             <span className="text-[10px] font-mono font-bold text-amber-400 tracking-[0.2em] uppercase">
-              Centro de Investigación Activo
+              {t('hero.badge')}
             </span>
           </div>
 
@@ -63,17 +65,15 @@ export default function Landing() {
           </h1>
 
           <p className="text-zinc-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Explorando el Deep State y los Programas Clasificados. Hub premium de investigación multimedia
-            con testimonios de denunciantes, tecnologías ocultas y documentación de proyectos secretos.
-            Todo documentado, traducido y accesible.
+            {t('hero.subtitle')}
           </p>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             {[
-              { value: `${PROJECTS.length}`, label: 'Proyectos' },
-              { value: '1000+', label: 'Archivos Multimedia' },
-              { value: '20+', label: 'Años de Investigación' },
-              { value: '14+', label: 'Fuentes Oficiales' },
+              { value: `${PROJECTS.length}`, label: t('stats.projects') },
+              { value: '1.000+', label: t('stats.media') },
+              { value: '20+', label: t('stats.years') },
+              { value: '14+', label: t('stats.sources') },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl md:text-3xl font-black text-white glow-text">{stat.value}</div>
@@ -92,8 +92,8 @@ export default function Landing() {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Buscar proyectos, categorías, evidencia..."
-                className="w-full pl-11 pr-4 py-3.5 bg-[#111119] border border-white/[0.06] rounded-xl text-sm text-zinc-200 font-mono placeholder:text-zinc-600 focus:outline-none focus:border-amber-500/30 focus:shadow-[0_0_20px_rgba(245,158,11,0.1)] transition-all duration-300"
+                placeholder={t('search.placeholder')}
+                className="w-full pl-11 pr-4 py-3.5 bg-panel border border-white/[0.06] rounded-xl text-sm text-zinc-200 font-mono placeholder:text-zinc-600 focus:outline-none focus:border-amber-500/30 focus:shadow-[0_0_20px_rgba(245,158,11,0.1)] transition-all duration-300"
               />
               {search && (
                 <button
@@ -109,11 +109,11 @@ export default function Landing() {
                 onClick={() => setSelectedCategory(null)}
                 className={`text-[9px] font-mono font-bold tracking-[0.1em] px-3 py-1.5 rounded-full border transition-all duration-200 ${
                   !selectedCategory
-                    ? 'bg-amber-500 text-black border-amber-500'
+                    ? 'bg-amber-500 text-black border-amber-500 shadow-[0_0_12px_rgba(245,158,11,0.25)]'
                     : 'text-zinc-400 border-zinc-800 hover:border-zinc-600 hover:text-white'
                 }`}
               >
-                TODOS ({PROJECTS.length})
+                {t('filter.all')} ({PROJECTS.length})
               </button>
               {ALL_CATEGORIES.map((cat) => (
                 <button
@@ -121,7 +121,7 @@ export default function Landing() {
                   onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
                   className={`text-[9px] font-mono font-bold tracking-[0.1em] px-3 py-1.5 rounded-full border transition-all duration-200 ${
                     selectedCategory === cat
-                      ? 'bg-amber-500 text-black border-amber-500'
+                      ? 'bg-amber-500 text-black border-amber-500 shadow-[0_0_12px_rgba(245,158,11,0.25)]'
                       : 'text-zinc-400 border-zinc-800 hover:border-zinc-600 hover:text-white'
                   }`}
                 >
@@ -131,9 +131,9 @@ export default function Landing() {
             </div>
             {(search || selectedCategory) && (
               <p className="text-[10px] font-mono text-zinc-500 mt-3">
-                {totalResults} resultado{totalResults !== 1 ? 's' : ''} encontrado{totalResults !== 1 ? 's' : ''}
-                {search && <span> para "<span className="text-amber-400">{search}</span>"</span>}
-                {selectedCategory && <span> en <span className="text-amber-400">{selectedCategory}</span></span>}
+                {totalResults} {t('results.found')}
+                {search && <span> {t('results.for')} "<span className="text-amber-400">{search}</span>"</span>}
+                {selectedCategory && <span> {t('results.in')} <span className="text-amber-400">{selectedCategory}</span></span>}
               </p>
             )}
           </div>
@@ -146,7 +146,7 @@ export default function Landing() {
           <div className="flex items-center gap-4 mb-12">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
             <h2 className="text-[11px] font-mono font-bold tracking-[0.3em] text-amber-400 uppercase whitespace-nowrap">
-              Proyectos Principales
+              {t('section.main')}
             </h2>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
           </div>
@@ -164,7 +164,7 @@ export default function Landing() {
           <div className="flex items-center gap-4 mb-10">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
             <h2 className="text-[11px] font-mono font-bold tracking-[0.3em] text-zinc-500 uppercase whitespace-nowrap">
-              Más Investigaciones
+              {t('section.more')}
             </h2>
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
           </div>
@@ -179,12 +179,12 @@ export default function Landing() {
       {/* ───── NO RESULTS ───── */}
       {totalResults === 0 && (
         <section className="max-w-4xl mx-auto px-6 py-24 text-center">
-          <p className="text-lg text-zinc-400 mb-4">No se encontraron resultados</p>
+          <p className="text-lg text-zinc-400 mb-4">{t('results.none')}</p>
           <button
             onClick={() => { setSearch(''); setSelectedCategory(null); }}
             className="btn-outline text-xs"
           >
-            Limpiar filtros
+            {t('filter.clear')}
           </button>
         </section>
       )}
@@ -193,15 +193,10 @@ export default function Landing() {
       <section id="about" className="max-w-4xl mx-auto px-6 pb-24">
         <div className="glass-panel rounded-2xl p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl font-black text-white mb-4 tracking-tight">
-            Misión del Proyecto
+            {t('section.mission')}
           </h2>
           <p className="text-sm text-zinc-400 leading-relaxed max-w-2xl mx-auto mb-6">
-            Este hub compila, traduce y organiza más de dos décadas de testimonios de denunciantes,
-            documentos desclasificados, y análisis de programas clasificados. Desde los archivos de
-            Project Camelot hasta los documentos desclasificados de MK-Ultra, HAARP y las audiencias
-            congresionales UAP de 2023-2026, todo el contenido está disponible en español para su
-            consulta, investigación y archivo. Cada proyecto incluye reproductor multimedia funcional,
-            documentos con copia al portapapeles, y enlaces directos a fuentes oficiales.
+            {t('section.mission.text')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {PROJECTS.map((p) => (

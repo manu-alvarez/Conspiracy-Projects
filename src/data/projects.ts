@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     title: 'Project Camelot',
     subtitle: 'Portal Principal de Inteligencia',
     description:
-      'Investigación de fenómenos inexplicables, testimonios de denunciantes y programas espaciales clasificados. Más de 20 años de archivo.',
+      'Investigación de fenómenos inexplicables, testimonios de denunciantes y programas espaciales clasificados. Más de 20 años de archivo multimedia completo.',
     longDescription:
       'Project Camelot es una organización de investigación periodística independiente fundada por Kerry Cassidy y Bill Ryan. Durante más de dos décadas, ha compilado testimonios de denunciantes militares, científicos y funcionarios de inteligencia que revelan la existencia de programas espaciales secretos, agendas exopolíticas, y tecnologías clasificadas de propulsión y energía libre. Su archivo incluye más de 1.000 entrevistas grabadas, transcripciones completas y análisis geopolítico de alto nivel.',
     cta: 'EXPLORAR',
@@ -147,12 +147,12 @@ export const PROJECTS: Project[] = [
     media: [
       {
         id: 'bb-1',
-        title: 'Project Bluebeam — Análisis Completo',
-        url: 'https://rumble.com/user/projectcamelot',
-        embedUrl: 'https://rumble.com/embed/v5jh9ya/',
+        title: 'Project Bluebeam — Documental Serge Monast',
+        url: 'https://www.youtube.com/watch?v=2hbLpAWXxNw',
+        embedUrl: 'https://www.youtube.com/embed/2hbLpAWXxNw',
         duration: '01:10:00',
         type: 'embed',
-        source: 'Rumble',
+        source: 'YouTube',
       },
     ],
     documents: [
@@ -244,11 +244,12 @@ export const PROJECTS: Project[] = [
     media: [
       {
         id: 'haarp-1',
-        title: 'HAARP — Documental Completo',
-        url: 'https://www.haarp.alaska.edu/',
+        title: 'HAARP 1995 — Documental Completo',
+        url: 'https://www.youtube.com/watch?v=6wieDZVkbNE',
+        embedUrl: 'https://www.youtube.com/embed/6wieDZVkbNE',
         duration: '01:25:00',
-        type: 'external',
-        source: 'Archivo',
+        type: 'embed',
+        source: 'YouTube',
       },
     ],
     documents: [
@@ -288,11 +289,20 @@ export const PROJECTS: Project[] = [
     media: [
       {
         id: 'mk-1',
-        title: 'MK-Ultra — Documentos Desclasificados',
+        title: 'MK-Ultra — Documental Completo Desclasificado',
+        url: 'https://www.youtube.com/watch?v=LQucESRF3Sg',
+        embedUrl: 'https://www.youtube.com/embed/LQucESRF3Sg',
+        duration: '01:28:00',
+        type: 'embed',
+        source: 'YouTube',
+      },
+      {
+        id: 'mk-2',
+        title: 'CIA Reading Room — Archivos MK-Ultra Originales',
         url: 'https://www.cia.gov/readingroom/search/site/mkultra',
-        duration: 'Archivo',
+        duration: '20.000+ documentos',
         type: 'external',
-        source: 'CIA Reading Room',
+        source: 'CIA FOIA',
       },
     ],
     documents: [
@@ -337,11 +347,12 @@ export const PROJECTS: Project[] = [
     media: [
       {
         id: 'serpo-1',
-        title: 'Project Serpo — Análisis Documental',
-        url: 'https://projectcamelotportal.com/',
-        duration: '00:50:00',
-        type: 'external',
-        source: 'Archivo',
+        title: 'Project Serpo — Análisis Completo del Intercambio',
+        url: 'https://odysee.com/@PROJECTCAMELOT:d',
+        embedUrl: 'https://odysee.com/$/embed/@PROJECTCAMELOT:d',
+        duration: '01:20:00',
+        type: 'embed',
+        source: 'Odysee / Camelot',
       },
     ],
     documents: [
@@ -444,10 +455,314 @@ export const PROJECTS: Project[] = [
     ],
     updated: '2026',
   },
+  {
+    id: 'uap-disclosure',
+    title: 'UAP Disclosure',
+    subtitle: 'Revelación Congresional 2023–2026',
+    description:
+      'El movimiento de transparencia UAP más grande de la historia. Audiencias del Congreso, denunciantes militares, sistema PURSUE y desclasificación masiva de archivos del Pentágono.',
+    longDescription:
+      'El Movimiento de Revelación UAP (Fenómenos Anómalos No Identificados) representa el mayor esfuerzo institucional de transparencia sobre tecnología no humana en la historia de EE.UU. En julio de 2023, el oficial de inteligencia David Grusch testificó ante el Subcomité de Supervisión de la Cámara que el gobierno posee un programa de recuperación y retroingeniería de naves de origen no humano de varias décadas. En 2024-2025, el Congreso realizó audiencias adicionales con veteranos militares que describieron encuentros con objetos transmedium. En 2026, directivas presidenciales lanzaron el sistema PURSUE del Departamento de Defensa, iniciando la desclasificación masiva de archivos — desde documentos del Project Blue Book de la Guerra Fría hasta metraje infrarrojo reciente de sensores militares (AC-130J, Golfo de Omán). En septiembre de 2026, el Pentágono emitió exenciones legales históricas permitiendo a personal militar y contratistas compartir datos clasificados UAP con AARO sin temor a represalias.',
+    cta: 'AUDIENCIAS',
+    category: 'Desclasificación',
+    icon: '🏛️',
+    color: 'amber',
+    image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=800&q=80',
+    status: 'ACTIVO',
+    evidence: [
+      'Testimonio David Grusch ante el Congreso (julio 2023) — programa de retroingeniería ET',
+      'AARO: ~2.000 incidentes UAP reportados, subconjunto sin resolver',
+      'Sistema PURSUE (2026): desclasificación masiva en war.gov/ufo',
+      'Exenciones legales del Pentágono/ODNI para denunciantes (sept. 2026)',
+      'Metraje infrarrojo AC-130J del Golfo de Omán desclasificado',
+      'Coronel Karl Nell: plan de divulgación tipo Manhattan Project para 2030',
+    ],
+    media: [
+      {
+        id: 'uap-1',
+        title: 'Audiencia Congreso — David Grusch (julio 2023)',
+        url: 'https://www.youtube.com/watch?v=KQ7Dw-739VY',
+        embedUrl: 'https://www.youtube.com/embed/KQ7Dw-739VY',
+        duration: '2:45:00',
+        type: 'embed',
+        source: 'C-SPAN / YouTube',
+      },
+      {
+        id: 'uap-2',
+        title: 'Portal de Archivos Desclasificados PURSUE',
+        url: 'https://war.gov/ufo',
+        duration: 'Archivo',
+        type: 'external',
+        source: 'Departamento de Defensa',
+      },
+    ],
+    documents: [
+      {
+        title: 'Cronología UAP Disclosure 2017–2026',
+        content:
+          '2017 — NYT revela programa AATIP del Pentágono. Videos "Go Fast", "Gimbal", "FLIR1" desclasificados.\n\n2020 — UAP Task Force (UAPTF) creada oficialmente bajo la US Navy.\n\n2022 — AARO (All-domain Anomaly Resolution Office) reemplaza UAPTF. Audiencias abiertas del Congreso.\n\n2023 — JULIO: David Grusch testifica bajo juramento. Revela programa de recuperación y retroingeniería de naves no humanas.\n\n2024 — "Immaculate Constellation" filtrado al Congreso. Audiencias de noviembre con Lue Elizondo.\n\n2025 — Septiembre: Audiencias de transparencia con veteranos. Rep. Luna y Burchett presionan por inmunidad legal total.\n\n2026 — MAYO: Lanzamiento del sistema PURSUE. Desclasificación masiva comienza.\n— SEPTIEMBRE: Exenciones legales ODNI para denunciantes.\n— Base de datos AARO alcanza ~2.000 incidentes reportados.',
+      },
+      {
+        title: 'Testimonio Clave: David Grusch',
+        content:
+          'CARGO: Ex-oficial de inteligencia USAF, NGA, NRO\nCLASIFICACIÓN DE TESTIMONIO: Bajo juramento ante el Congreso\n\nAFIRMACIONES PRINCIPALES:\n1. EE.UU. posee programa multi-décadas de recuperación de naves de origen no humano\n2. Se han recuperado "biológicos no humanos" de sitios de impacto\n3. Represalias documentadas contra denunciantes previos\n4. Programas operan fuera de supervisión congresional\n5. Contratistas de defensa privados involucrados en retroingeniería\n\nCORROBORACIÓN:\n- Inspector General de la Comunidad de Inteligencia clasificó denuncia como "urgente y creíble"\n- Coronel Karl Nell confirmó públicamente la credibilidad de Grusch\n- Múltiples testigos adicionales identificados en sesiones clasificadas',
+      },
+    ],
+    externalLinks: [
+      { label: 'AARO — Sitio Oficial', url: 'https://www.aaro.mil/' },
+      { label: 'Archivos PURSUE', url: 'https://war.gov/ufo' },
+      { label: 'Audiencia C-SPAN Grusch', url: 'https://www.youtube.com/watch?v=KQ7Dw-739VY' },
+      { label: 'The Sol Foundation', url: 'https://thesolfoundation.org/' },
+    ],
+    updated: 'Octubre 2026',
+  },
+  {
+    id: 'immaculate-constellation',
+    title: 'Immaculate Constellation',
+    subtitle: 'Programa uSAP del Pentágono',
+    description:
+      'Programa de Acceso Especial No Reconocido (uSAP) filtrado del Pentágono. Repositorio central de la evidencia UAP más sensible del ejército, oculto incluso de AARO.',
+    longDescription:
+      '"Immaculate Constellation" es un presunto Programa de Acceso Especial No Reconocido (uSAP) del Pentágono revelado públicamente a finales de 2024 a través de un documento de denuncia de aproximadamente 12 páginas proporcionado al Congreso. Según las filtraciones reportadas por el periodista Michael Shellenberger y confirmadas en audiencias congresionales, el programa actúa como un repositorio central o capa de inteligencia diseñada para capturar y aislar imágenes de alta fidelidad, datos multi-sensor y documentación de fuentes primarias sobre encuentros UAP. La existencia del programa fue introducida formalmente en el registro congresional durante la audiencia del Comité de Supervisión de la Cámara "Fenómenos Anómalos No Identificados: Exponiendo la Verdad" en noviembre de 2024, donde la Representante Nancy Mace cuestionó a testigos sobre uSAPs heredados ocultos. El Departamento de Defensa ha negado consistentemente la existencia de cualquier programa con ese nombre.',
+    cta: 'FILTRACIÓN',
+    category: 'uSAP / Intel',
+    icon: '🔒',
+    color: 'red',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80',
+    status: 'CLASIFICADO',
+    evidence: [
+      'Documento de denuncia de ~12 páginas entregado al Congreso (2024)',
+      'Reportado por Michael Shellenberger — periodista independiente',
+      'Audiencia House Oversight Committee (noviembre 2024)',
+      'Representante Nancy Mace introduce evidencia en registro congresional',
+      'DoD niega existencia — portavoz Sue Gough: "sin registro"',
+      'Lue Elizondo testifica sobre uSAPs heredados ocultos',
+    ],
+    media: [
+      {
+        id: 'ic-1',
+        title: 'Audiencia Congreso — Exposing the Truth (Nov 2024)',
+        url: 'https://www.youtube.com/results?search_query=immaculate+constellation+hearing+2024',
+        duration: '3:00:00',
+        type: 'external',
+        source: 'House Oversight Committee',
+      },
+    ],
+    documents: [
+      {
+        title: 'Análisis: Immaculate Constellation',
+        content:
+          'CLASIFICACIÓN PRESUNTA: uSAP (Unacknowledged Special Access Program)\nRESPONSABLE: Desconocido (fuera de cadena de mando AARO)\nFUNCIÓN: Repositorio central de evidencia UAP de alta fidelidad\n\nCARACTERÍSTICAS:\n- Captura y aísla imágenes multi-sensor de encuentros UAP\n- Opera fuera de la supervisión de AARO y del Congreso\n- Datos incluyen metraje infrarrojo, radar, y sensores clasificados\n- Mantiene la evidencia más compelling separada de canales oficiales\n\nPOSICIÓN OFICIAL DoD:\n"El Departamento de Defensa no tiene registro, histórico o presente, de ningún programa o SAP denominado Immaculate Constellation" — Portavoz Sue Gough\n\nCONTEXTO LEGISLATIVO:\nH.R. 8917 (2024-2025) — Proyecto de ley para reestructurar o reemplazar AARO y dispersar responsabilidades observacionales, reflejando la fricción entre el Congreso y el establishment de defensa.',
+      },
+    ],
+    externalLinks: [
+      { label: 'Registro Congresional', url: 'https://www.govinfo.gov/' },
+      { label: 'Reporte Shellenberger', url: 'https://www.public.news/' },
+    ],
+    updated: 'Octubre 2026',
+  },
+  {
+    id: 'paperclip',
+    title: 'Operation Paperclip',
+    subtitle: 'Científicos Nazis en EE.UU.',
+    description:
+      'Programa secreto de inteligencia (1945-1959) que reclutó científicos, ingenieros y técnicos nazis para trabajar en rocketería, aviación y guerra química durante la Guerra Fría.',
+    longDescription:
+      'Operation Paperclip fue un programa de inteligencia clasificado de Estados Unidos, operado principalmente por la Joint Intelligence Objectives Agency (JIOA), que reclutó a más de 1.600 científicos, ingenieros y técnicos alemanes — muchos de ellos miembros o líderes del Partido Nazi y la SS — para trabajar para el gobierno estadounidense tras la Segunda Guerra Mundial. El objetivo primario era obtener una ventaja tecnológica decisiva en rocketería, aviación, guerra química y medicina aeroespacial durante la Guerra Fría temprana. La figura más emblemática fue Wernher von Braun, ex-miembro de la SS que se convirtió en director del Marshall Space Flight Center de la NASA y arquitecto principal del cohete Saturn V del programa Apolo. El programa deliberadamente falsificó y blanqueó los historiales de los científicos para eludir las directivas del presidente Truman que prohibían la inmigración de nazis activos.',
+    cta: 'ARCHIVOS',
+    category: 'Desclasificado',
+    icon: '📎',
+    color: 'blue',
+    image: 'https://images.unsplash.com/photo-1569982175971-d92b01cf8694?w=800&q=80',
+    status: 'DESCLASIFICADO',
+    evidence: [
+      'Más de 1.600 científicos nazis reclutados por JIOA (1945-1959)',
+      'Wernher von Braun: SS → NASA → Director Saturn V / Apolo',
+      'Historiales falsificados para eludir directivas presidenciales',
+      'Programa incluyó especialistas en guerra química y biológica',
+      'Archivos desclasificados por National Archives (NARA)',
+    ],
+    media: [
+      {
+        id: 'pc-1',
+        title: 'Operation Paperclip — Documental NASA & Nazis',
+        url: 'https://www.youtube.com/watch?v=nfMQHmR3sHg',
+        embedUrl: 'https://www.youtube.com/embed/nfMQHmR3sHg',
+        duration: '1:30:00',
+        type: 'embed',
+        source: 'YouTube',
+      },
+    ],
+    documents: [
+      {
+        title: 'Ficha de Operación Paperclip',
+        content:
+          'NOMBRE: Operation Paperclip (también: Project Paperclip)\nPERIODO: 1945–1959\nAGENCIA: Joint Intelligence Objectives Agency (JIOA)\nCLASIFICACIÓN ORIGINAL: TOP SECRET\nESTATUS: DESCLASIFICADO\n\nCIENTÍFICOS CLAVE RECLUTADOS:\n- Wernher von Braun — Rocketería (V-2 → Saturn V)\n- Kurt Debus — Director Centro Espacial Kennedy\n- Hubertus Strughold — "Padre de la medicina espacial" (experimentos en Dachau)\n- Arthur Rudolph — Gerente del programa Saturn V (campo de concentración Mittelbau-Dora)\n- Walter Schreiber — General médico, investigación biológica\n\nCONTROVERSIA:\nEl programa deliberadamente blanqueó historiales nazis para eludir la directiva de Truman que prohibía la inmigración de miembros activos del NSDAP. Muchos científicos tenían conexiones directas con campos de concentración y uso de trabajo forzado.',
+      },
+    ],
+    externalLinks: [
+      { label: 'National Archives — Paperclip', url: 'https://www.archives.gov/iwg/research-papers/paperclip' },
+      { label: 'CIA FOIA', url: 'https://www.cia.gov/readingroom/' },
+    ],
+    updated: '2026',
+  },
+  {
+    id: 'mockingbird',
+    title: 'Operation Mockingbird',
+    subtitle: 'Control de Medios por la CIA',
+    description:
+      'Campaña clandestina de la CIA para infiltrar y controlar medios de comunicación domésticos e internacionales. Periodistas, editores y medios reclutados como activos de inteligencia.',
+    longDescription:
+      'Operation Mockingbird fue una campaña encubierta de la CIA iniciada a principios de los años 1950 para manipular medios de comunicación con fines de propaganda doméstica e internacional. La operación buscó reclutar periodistas, editores, y propietarios de medios como activos de inteligencia, integrándolos en las principales organizaciones de noticias para moldear la opinión pública y alinear las narrativas mediáticas con la política exterior anticomunista de EE.UU. Según las investigaciones del Comité Church del Senado (1975), la CIA tenía relaciones operativas con más de 50 organizaciones de noticias y editores estadounidenses. El periodista Carl Bernstein reportó en Rolling Stone (1977) que más de 400 periodistas estadounidenses habían mantenido relaciones secretas con la CIA durante los 25 años anteriores. La operación es citada frecuentemente como el precedente histórico de la manipulación mediática institucional.',
+    cta: 'INVESTIGAR',
+    category: 'Propaganda',
+    icon: '🦜',
+    color: 'emerald',
+    image: 'https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=800&q=80',
+    status: 'DESCLASIFICADO',
+    evidence: [
+      'Comité Church del Senado (1975): CIA con 50+ organizaciones de medios',
+      'Carl Bernstein (Rolling Stone 1977): 400+ periodistas con la CIA',
+      'Reclutamiento de editores y propietarios de periódicos nacionales',
+      'Financiación encubierta de publicaciones culturales (Congress for Cultural Freedom)',
+      'Precedente histórico de manipulación mediática institucional',
+    ],
+    media: [
+      {
+        id: 'mb-1',
+        title: 'Operation Mockingbird — Control Mediático CIA',
+        url: 'https://www.youtube.com/watch?v=_gcCxL7hDMc',
+        embedUrl: 'https://www.youtube.com/embed/_gcCxL7hDMc',
+        duration: '1:00:00',
+        type: 'embed',
+        source: 'YouTube',
+      },
+    ],
+    documents: [
+      {
+        title: 'Operation Mockingbird — Alcance Documentado',
+        content:
+          'INICIO: Principios de los años 1950\nAGENCIA: CIA (Directorate of Plans)\nDIRECTOR: Frank Wisner (primero), luego Cord Meyer, Richard Helms\nESTATUS: Parcialmente desclasificado\n\nMEDIOS INFILTRADOS DOCUMENTADOS:\n- The Washington Post\n- The New York Times\n- CBS News\n- Time/Life magazines\n- Newsweek\n- Associated Press\n- United Press International\n- Reuters (parcial)\n\nMECANISMOS:\n- Reclutamiento directo de periodistas como activos CIA\n- Financiación encubierta de publicaciones\n- Provisión de "historias" pre-fabricadas a medios\n- Control editorial de cobertura internacional\n- Congress for Cultural Freedom como fachada cultural\n\nFUENTES:\n- Audiencias Comité Church (1975)\n- Carl Bernstein, "The CIA and the Media", Rolling Stone (1977)\n- Documentos desclasificados FOIA',
+      },
+    ],
+    externalLinks: [
+      { label: 'Comité Church — Senado', url: 'https://www.intelligence.senate.gov/resources/intelligence-related-commissions' },
+      { label: 'Bernstein: CIA & the Media', url: 'https://www.carlbernstein.com/the-cia-and-the-media-rolling-stone-10-20-1977' },
+    ],
+    updated: '2026',
+  },
+  {
+    id: 'prism-fiveeyes',
+    title: 'PRISM / Five Eyes',
+    subtitle: 'Vigilancia Masiva Global',
+    description:
+      'Programa de vigilancia electrónica masiva de la NSA revelado por Edward Snowden en 2013. Recolección directa de datos de Google, Apple, Microsoft y Facebook a escala global.',
+    longDescription:
+      'PRISM es un programa de vigilancia electrónica operado por la Agencia de Seguridad Nacional (NSA) desde 2007 bajo la administración Bush, reautorizado mediante las enmiendas FISA y el Patriot Act. El programa permite a la comunidad de inteligencia recopilar datos de comunicaciones directamente de los servidores de las principales empresas tecnológicas estadounidenses. Fue expuesto en junio de 2013 por el ex-contratista de la NSA Edward Snowden, quien filtró un vasto archivo de documentos clasificados a los periodistas Glenn Greenwald, Laura Poitras y Ewen MacAskill. Las revelaciones de Snowden expusieron la escala global de la vigilancia digital: interceptación de metadatos telefónicos, monitoreo de comunicaciones de líderes extranjeros aliados, y la colaboración de la alianza Five Eyes (EE.UU., Reino Unido, Canadá, Australia, Nueva Zelanda) para evadir restricciones legales domésticas sobre espionaje a sus propios ciudadanos.',
+    cta: 'REVELAR',
+    category: 'Vigilancia',
+    icon: '👁️‍🗨️',
+    color: 'cyan',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80',
+    status: 'DESCLASIFICADO',
+    evidence: [
+      'Edward Snowden: ex-contratista NSA, filtración junio 2013',
+      'PRISM: recolección directa de Google, Apple, Microsoft, Facebook, Yahoo',
+      'Five Eyes: EE.UU., UK, Canadá, Australia, Nueva Zelanda',
+      'Programa XKeyscore: búsqueda en tiempo real del tráfico de Internet global',
+      'Acuerdo UKUSA: raíz en inteligencia de señales WWII',
+      'Monitoreo documentado de líderes aliados (Angela Merkel, ONU)',
+    ],
+    media: [
+      {
+        id: 'pr-1',
+        title: 'Edward Snowden — Revelaciones NSA Completas',
+        url: 'https://www.youtube.com/watch?v=XEVlyP4_11M',
+        embedUrl: 'https://www.youtube.com/embed/XEVlyP4_11M',
+        duration: '1:47:00',
+        type: 'embed',
+        source: 'YouTube',
+      },
+      {
+        id: 'pr-2',
+        title: 'The Intercept — Archivo Snowden Completo',
+        url: 'https://theintercept.com/snowden-sidtoday/',
+        duration: 'Archivo',
+        type: 'external',
+        source: 'The Intercept',
+      },
+    ],
+    documents: [
+      {
+        title: 'Arquitectura de Vigilancia NSA/Five Eyes',
+        content:
+          'PROGRAMA PRISM (2007–presente)\nAGENCIA: NSA (National Security Agency)\nBASE LEGAL: FISA Amendments Act, Section 702\n\nEMPRESAS PARTICIPANTES DOCUMENTADAS:\n- Microsoft (desde 2007)\n- Yahoo (2008)\n- Google (2009)\n- Facebook (2009)\n- Apple (2012)\n- Dropbox (2012)\n\nPROGRAMAS COMPLEMENTARIOS:\n- XKeyscore: Motor de búsqueda en tiempo real del tráfico de Internet global\n- Tempora (GCHQ/UK): Interceptación de cables submarinos de fibra óptica\n- Boundless Informant: Herramienta de cuantificación de metadatos recolectados\n- Stellar Wind: Programa doméstico de interceptación sin orden judicial\n\nALIANZA FIVE EYES (FVEY):\n🇺🇸 NSA — 🇬🇧 GCHQ — 🇨🇦 CSE — 🇦🇺 ASD — 🇳🇿 GCSB\nMecanismo: Cada nación espía a los ciudadanos de las otras y comparte la información, evadiendo prohibiciones legales domésticas.',
+      },
+    ],
+    externalLinks: [
+      { label: 'The Intercept — Snowden Archive', url: 'https://theintercept.com/snowden-sidtoday/' },
+      { label: 'EFF — NSA Surveillance', url: 'https://www.eff.org/nsa-spying' },
+      { label: 'Citizenfour', url: 'https://citizenfourfilm.com/' },
+    ],
+    updated: '2026',
+  },
+  {
+    id: 'northwoods',
+    title: 'Operation Northwoods',
+    subtitle: 'Propuesta de Falsa Bandera',
+    description:
+      'Propuestas desclasificadas del Estado Mayor Conjunto de EE.UU. (1962) para orquestar ataques terroristas de falsa bandera en suelo estadounidense para justificar una invasión de Cuba.',
+    longDescription:
+      'Operation Northwoods fue una serie de propuestas de operaciones militares de falsa bandera desarrolladas en 1962 por el Departamento de Defensa de EE.UU. y el Estado Mayor Conjunto durante la presidencia de John F. Kennedy. Las propuestas incluían: orquestar ataques terroristas simulados en ciudades estadounidenses, secuestrar aviones comerciales, hundir embarcaciones cerca de Cuba, fabricar ataques contra la base de Guantánamo, y culpar al gobierno de Fidel Castro para crear un pretexto público para una invasión militar de Cuba. El Presidente Kennedy rechazó categóricamente las propuestas. Los documentos fueron desclasificados en los años 1990 por la Assassination Records Review Board y son accesibles a través del National Security Archive de la Universidad George Washington. Operation Northwoods es citada como la evidencia desclasificada más clara de que sectores del gobierno estadounidense han considerado activamente operaciones de falsa bandera contra sus propios ciudadanos.',
+    cta: 'DESCLASIFICADO',
+    category: 'Falsa Bandera',
+    icon: '🏴',
+    color: 'red',
+    image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&q=80',
+    status: 'DESCLASIFICADO',
+    evidence: [
+      'Propuesta del Estado Mayor Conjunto (Joint Chiefs of Staff), marzo 1962',
+      'Presidente JFK rechazó categóricamente las operaciones',
+      'Desclasificado por Assassination Records Review Board (1990s)',
+      'Documento completo accesible en National Security Archive',
+      'Propuestas incluían secuestro de aviones y ataques terroristas simulados',
+    ],
+    media: [
+      {
+        id: 'nw-1',
+        title: 'Operation Northwoods — Johnny Harris Explicado',
+        url: 'https://www.youtube.com/watch?v=e21XPKSZGO8',
+        embedUrl: 'https://www.youtube.com/embed/e21XPKSZGO8',
+        duration: '15:28',
+        type: 'embed',
+        source: 'YouTube',
+      },
+      {
+        id: 'nw-2',
+        title: 'Documento Original Desclasificado (PDF)',
+        url: 'https://nsarchive2.gwu.edu/news/20010430/northwoods.pdf',
+        duration: 'Documento',
+        type: 'external',
+        source: 'National Security Archive',
+      },
+    ],
+    documents: [
+      {
+        title: 'Propuestas Northwoods (extracto desclasificado)',
+        content:
+          'MEMORANDO PARA: Secretario de Defensa\nDE: Estado Mayor Conjunto (Joint Chiefs of Staff)\nASUNTO: Justificación para intervención militar en Cuba\nFECHA: 13 de marzo de 1962\nCLASIFICACIÓN ORIGINAL: TOP SECRET SPECIAL HANDLING — NOFORN\n\nOPERACIONES PROPUESTAS:\n1. Provocar incidentes en la Base Naval de Guantánamo — ataques simulados, sabotaje, disturbios\n2. "Remember the Maine": Hundir un navío estadounidense cerca de Cuba y culpar al régimen de Castro\n3. Campaña de terror en ciudades de Florida — bombas coordinadas, arrestos de "agentes cubanos"\n4. Secuestro de aviones comerciales — desvíos y "ataques" atribuidos a Cuba\n5. Destrucción de un dron pintado como vuelo charter comercial sobre aguas cubanas\n6. Fabricar lista de víctimas civiles para maximizar indignación pública\n\nRESULTADO:\nPresidente Kennedy rechazó TODAS las propuestas.\nGeneral Lyman Lemnitzer (Chairman JCS) fue removido de su cargo poco después.\n\nDESCLASIFICACIÓN:\nAssassination Records Review Board, finales de los 1990s.\nArchivo completo: National Security Archive, GWU.',
+      },
+    ],
+    externalLinks: [
+      { label: 'Documento Original (PDF)', url: 'https://nsarchive2.gwu.edu/news/20010430/northwoods.pdf' },
+      { label: 'National Security Archive', url: 'https://nsarchive.gwu.edu/' },
+    ],
+    updated: '2026',
+  },
 ];
 
 export const FEATURED_PROJECTS = PROJECTS.filter(
-  (p) => ['camelot', 'bluebeam', 'avalon', 'haarp', 'mkultra', 'serpo'].includes(p.id)
+  (p) => ['camelot', 'bluebeam', 'avalon', 'haarp', 'mkultra', 'serpo', 'uap-disclosure', 'immaculate-constellation', 'prism-fiveeyes'].includes(p.id)
 );
 
 export const ALL_PROJECTS_MAP: Record<string, Project> = Object.fromEntries(

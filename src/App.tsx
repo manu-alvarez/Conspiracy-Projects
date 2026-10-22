@@ -23,9 +23,19 @@ export default function App() {
       <LangProvider>
         <HashRouter>
           <ScrollToTop />
-          <div className="min-h-screen flex flex-col bg-bg text-zinc-200 antialiased">
+          <div className="min-h-screen flex flex-col bg-bg text-zinc-200 antialiased relative">
+            {/* ───── GLOBAL AMBIENT SACRED EMBLEM WATERMARK ───── */}
+            <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden flex items-center justify-center">
+              <img
+                src="/Conspiracy-Projects/icon-512.png"
+                alt=""
+                className="w-[750px] h-[750px] max-w-none object-contain select-none filter blur-[1px] animate-ambient-float"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-bg/60 via-transparent to-bg/80" />
+            </div>
+
             <Navbar />
-            <main className="flex-1">
+            <main className="flex-1 relative z-10">
               <Routes>
                 <Route path="/" element={<Landing />} />
                 <Route path="/project/:id" element={<ProjectDetail />} />

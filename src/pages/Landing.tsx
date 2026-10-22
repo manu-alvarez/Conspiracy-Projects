@@ -40,16 +40,46 @@ export default function Landing() {
     <>
       {/* ───── HERO ───── */}
       <section className="relative overflow-hidden">
+        {/* Background Cosmic Atmosphere */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-[30%] left-[15%] w-[600px] h-[600px] rounded-full bg-amber-500/[0.04] blur-[120px]" />
-          <div className="absolute top-[20%] right-[5%] w-[400px] h-[400px] rounded-full bg-amber-600/[0.03] blur-[100px]" />
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
+          <div className="absolute inset-0 opacity-20">
+            <img
+              src="/Conspiracy-Projects/og-image.jpg"
+              alt=""
+              className="w-full h-full object-cover object-center filter blur-[1px] scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/75 to-bg" />
+          </div>
+          <div className="absolute -top-[20%] left-[20%] w-[500px] h-[500px] rounded-full bg-amber-500/[0.08] blur-[140px]" />
+          <div className="absolute top-[30%] right-[10%] w-[450px] h-[450px] rounded-full bg-yellow-600/[0.05] blur-[120px]" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/20 bg-amber-500/5 backdrop-blur-md mb-8 animate-fade-in">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-            <span className="text-[10px] font-mono font-bold text-amber-400 tracking-[0.2em] uppercase">
+        <div className="relative max-w-7xl mx-auto px-6 pt-16 pb-16 md:pt-24 md:pb-24 text-center">
+          {/* ───── CENTER SACRED EMBLEM LOGO ───── */}
+          <div className="relative inline-flex items-center justify-center mb-6 group cursor-default">
+            {/* Concentric aura glows */}
+            <div className="absolute -inset-6 rounded-full bg-gradient-to-r from-amber-500/25 via-yellow-400/20 to-amber-600/25 blur-3xl group-hover:blur-4xl transition-all duration-700 animate-pulse" />
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-amber-400/50 via-yellow-300/40 to-amber-500/50 opacity-60 blur-sm group-hover:opacity-100 transition-opacity" />
+
+            {/* Emblem Box */}
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-3xl p-1 bg-[#0a0a0f]/95 border border-amber-400/60 shadow-[0_0_40px_rgba(245,158,11,0.4)] backdrop-blur-2xl group-hover:scale-105 group-hover:shadow-[0_0_60px_rgba(245,158,11,0.65)] transition-all duration-500 overflow-hidden">
+              <img
+                src="/Conspiracy-Projects/icon-512.png"
+                alt="Global Conspiracy Projects Emblem"
+                className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(245,158,11,0.8)]"
+              />
+              {/* Shimmer light sweep */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+            </div>
+          </div>
+
+          <br />
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 backdrop-blur-md mb-6 animate-fade-in shadow-[0_0_15px_rgba(245,158,11,0.15)]">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+            <span className="text-[10px] font-mono font-bold text-amber-300 tracking-[0.2em] uppercase">
               {t('hero.badge')}
             </span>
           </div>

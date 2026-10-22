@@ -19,13 +19,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 h-14">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group" onClick={() => setOpen(false)}>
-          <img
-            src="/Conspiracy-Projects/favicon-32x32.png"
-            alt="GCP Logo"
-            className="w-6 h-6 rounded-md shadow-[0_0_10px_rgba(245,158,11,0.3)] group-hover:scale-105 transition-transform"
-          />
+          <div className="relative w-7 h-7 rounded-lg p-0.5 bg-gradient-to-br from-amber-400 via-amber-500 to-yellow-600 shadow-[0_0_12px_rgba(245,158,11,0.35)] group-hover:shadow-[0_0_20px_rgba(245,158,11,0.6)] group-hover:scale-105 transition-all duration-300">
+            <img
+              src="/Conspiracy-Projects/favicon-32x32.png"
+              alt="GCP Logo"
+              className="w-full h-full object-cover rounded-md"
+            />
+          </div>
           <div className="flex flex-col">
-            <span className="text-sm font-black text-amber-400 group-hover:text-amber-300 transition-colors tracking-tight leading-none">
+            <span className="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-200 group-hover:brightness-125 transition-all tracking-tight leading-none">
               GCP
             </span>
             <span className="hidden sm:inline text-[8px] font-mono text-zinc-500 tracking-[0.15em] uppercase leading-none mt-0.5">

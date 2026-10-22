@@ -42,6 +42,13 @@ export default function ProjectCard({ project, index }: Props) {
         } as React.CSSProperties
       }
     >
+      {/* ───── ROTATING NEON GOLD BORDER BEAM ───── */}
+      <div className="neon-border-beam" aria-hidden="true" />
+
+      {/* ───── LUMINOUS CORNER DESTELLOS ───── */}
+      <div className="card-flare top-0 right-0 -mr-10 -mt-10" aria-hidden="true" />
+      <div className="card-flare bottom-0 left-0 -ml-10 -mb-10" aria-hidden="true" />
+
       {/* Background image */}
       <div className="absolute inset-0 z-0 overflow-hidden rounded-2xl">
         <img

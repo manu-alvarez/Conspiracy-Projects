@@ -11,6 +11,15 @@ export default function Timeline() {
     <section className="max-w-5xl mx-auto px-6 py-16 md:py-24">
       {/* Header */}
       <div className="text-center mb-16">
+        <div className="inline-flex items-center justify-center mb-4">
+          <div className="w-14 h-14 rounded-2xl p-0.5 bg-gradient-to-br from-amber-400 via-amber-500 to-yellow-600 shadow-[0_0_25px_rgba(245,158,11,0.4)]">
+            <img
+              src="/Conspiracy-Projects/icon-512.png"
+              alt="GCP Emblem"
+              className="w-full h-full object-contain rounded-xl bg-black/70 p-1"
+            />
+          </div>
+        </div>
         <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
           {t('timeline.title')}
         </h1>
